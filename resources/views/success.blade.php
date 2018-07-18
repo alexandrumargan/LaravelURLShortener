@@ -84,14 +84,7 @@
 
                 <div class="links">
                   <form method="post" action="{{url('/url')}}">
-                    @csrf
-                     <!-- Hidden CSRF token in order to CSRF protection middleware to validate the request -->
-                    <input type="text" placeholder="Enter your URL" name="url"/>
-                    <button type="submit"> Shorten URL </button>
-                  </form>
-                  @if (isset($url))
-                  <a href="{{url('url/'.$url->shortUrl)}}"> {{url('url/'.$url->shortUrl)}} </a>
-                  @endif
+                    <a href="{{url('url/'.$url->shortUrl)}}"> {{url('url/'.$url->shortUrl)}} </a>
                 </div>
             </div>
         </div>
