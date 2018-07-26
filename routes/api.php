@@ -17,10 +17,3 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('url', function(Request $request) {
-  $url = Url::create([
-    'url' => $request->url,
-    'shortUrl' => str_random(4)
-  ]);
-  return $url;
-});
